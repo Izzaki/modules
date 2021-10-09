@@ -69,10 +69,11 @@ MemoryReadPointer(hwnd, base, datatype="int", length=4, offsets=0, offset_1=0, o
 		Offset := Offset_%A_Index%
 		SetFormat, integer, h
 		base := baseresult + Offset
+		; msgbox addres: %baseresult%`noffset: %Offset%`nbase: %base%
 		SetFormat, integer, d
 	}
 	SetFormat, Integer, %B_FormatInteger%
-	return MemoryRead(hwnd,base,datatyp,length)
+	return MemoryRead(hwnd,base,datatype,length)
 }
 
 MemoryGetAddrPID(PID, DllName)
